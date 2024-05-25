@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Ref: @KevinPowell https://www.youtube.com/shorts/a0Tntm1RuWE -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Wrap</title>
+  <style>
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin-top: 100px;
+
+      > * {
+        flex: 1;
+        min-width: fit-content; /* this is magic, right here! */
+      }
+    }
+    button {
+      padding: 0.8rem 1.2rem;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button>Short</button>
+    <button>Long Text Button</button>
+  </div>
+</body>
+</html>
