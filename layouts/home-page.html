@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page Layout</title>
+  <style>
+    :root {
+      --header-height: 4rem;
+      --main-section-padding: 2rem;
+    }
+    *, *::after, *::before {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    header, main, body {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    body > header {
+      display: flex;
+      justify-content: space-between;
+      height: var(--header-height);
+
+      nav > ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+      }
+    }
+    section.hero {
+      background: #f0f0f0;
+      padding: var(--main-section-padding);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 100%;
+      height: calc(100svh - var(--header-height));
+
+      div:first-child {
+        align-self: center;
+      }
+      div:last-child {
+        flex-grow: 1;
+        align-self: center;
+        text-align: center;
+      }
+    }
+    section.portfolio {
+      padding-block: var(--main-section-padding);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      article {
+        display: grid;
+        gap: 1rem;
+      }
+
+      article > header {
+        background-color: grey;
+        width: 100%;
+        aspect-ratio: 3/1;
+      }
+    }
+    section.skills {
+      padding-block: 10rem;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        > li {
+          flex-grow: 1;
+
+        }
+      }
+    }
+    section.services {
+      height: 400px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      > article {
+        background-color: #f0f0f0;
+        height: 400px;
+      }
+    }
+    section.contact {
+      margin-block: 5rem;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+
+      form label {
+        display: block;
+      }
+
+      form input,
+      form textarea {
+        display: block;
+      }
+    }
+    body > footer {
+      min-height: 200px;
+      background-color: grey;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      Logo Here
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Lou Anthony Garcia</h1>
+        <h3>Full-stack web developer</h3>
+        <p>I can build a website for you</p>
+        <button>Send me an email!</button>
+      </div>
+      <div>
+        Half body picture here...
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <article>
+        <header>
+          <picture></picture>
+        </header>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam incidunt labore ea fugiat sed sunt.</div>
+        <footer>
+          <button>Preview</button>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <picture></picture>
+        </header>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum earum excepturi perferendis, eaque laborum quos?</div>
+        <footer>
+          <button>Preview</button>
+        </footer>
+      </article>
+      <article>
+        <header>
+          <picture></picture>
+        </header>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum laboriosam deserunt totam aliquam recusandae minima deleniti autem modi doloremque?</div>
+        <footer>
+          <button>Preview</button>
+        </footer>
+      </article>
+    </section>
+    <section class="skills" id="skills">
+      <ul>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>CodeIgniter</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>Postgres</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>TailwindCSS</li>
+        <li>Javascript</li>
+        <li>VueJS</li>
+        <li>NextJS</li>
+        <li>Angular</li>
+      </ul>
+    </section>
+    <section class="services" id="services">
+      <article></article>
+      <article></article>
+    </section>
+    <section class="contact" id="contact">
+      <form>
+        <label>
+          Name
+          <input type="text" name="email" />
+        </label><label>
+          Email
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Content
+          <textarea name="content"></textarea>
+        </label>
+        <footer>
+          <button type="button">Send</button>
+        </footer>
+      </form>
+      <div class="send-quote">
+        <button type="button">Request for a quote!</button>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>
